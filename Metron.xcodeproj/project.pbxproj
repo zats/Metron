@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1459BC2169206B00E0E289 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1459BB2169206B00E0E289 /* Arc.swift */; };
 		BA74CEA51EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
 		BA74CEA61EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
 		BA74CEA71EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
@@ -35,10 +36,6 @@
 		BA74CEBE1EF18C8700CC414C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE8E1EF18C8700CC414C /* Shape.swift */; };
 		BA74CEBF1EF18C8700CC414C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE8E1EF18C8700CC414C /* Shape.swift */; };
 		BA74CEC01EF18C8700CC414C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE8E1EF18C8700CC414C /* Shape.swift */; };
-		BA74CEC11EF18C8700CC414C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BA74CE901EF18C8700CC414C /* .gitkeep */; };
-		BA74CEC21EF18C8700CC414C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BA74CE901EF18C8700CC414C /* .gitkeep */; };
-		BA74CEC31EF18C8700CC414C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BA74CE901EF18C8700CC414C /* .gitkeep */; };
-		BA74CEC41EF18C8700CC414C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BA74CE901EF18C8700CC414C /* .gitkeep */; };
 		BA74CEC51EF18C8700CC414C /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE911EF18C8700CC414C /* Angle.swift */; };
 		BA74CEC61EF18C8700CC414C /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE911EF18C8700CC414C /* Angle.swift */; };
 		BA74CEC71EF18C8700CC414C /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE911EF18C8700CC414C /* Angle.swift */; };
@@ -118,6 +115,7 @@
 		52D6D9E21BEFFF6E002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1459BB2169206B00E0E289 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Metron.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Metron.plist; sourceTree = "<group>"; };
 		BA74CE881EF18C8700CC414C /* CornerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerType.swift; sourceTree = "<group>"; };
 		BA74CE891EF18C8700CC414C /* Drawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		BA74CE8C1EF18C8700CC414C /* PolygonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonType.swift; sourceTree = "<group>"; };
 		BA74CE8D1EF18C8700CC414C /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		BA74CE8E1EF18C8700CC414C /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		BA74CE901EF18C8700CC414C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BA74CE911EF18C8700CC414C /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		BA74CE921EF18C8700CC414C /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		BA74CE931EF18C8700CC414C /* Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
@@ -234,7 +231,7 @@
 		BA74CE8F1EF18C8700CC414C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BA74CE901EF18C8700CC414C /* .gitkeep */,
+				5C1459BB2169206B00E0E289 /* Arc.swift */,
 				BA74CE911EF18C8700CC414C /* Angle.swift */,
 				BA74CE921EF18C8700CC414C /* Circle.swift */,
 				BA74CE931EF18C8700CC414C /* Corner.swift */,
@@ -441,7 +438,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA74CEC11EF18C8700CC414C /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +445,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA74CEC31EF18C8700CC414C /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +452,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA74CEC41EF18C8700CC414C /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +459,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA74CEC21EF18C8700CC414C /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +473,7 @@
 				BA74CEAD1EF18C8700CC414C /* EdgeType.swift in Sources */,
 				BA74CEA91EF18C8700CC414C /* Drawable.swift in Sources */,
 				BA74CEB11EF18C8700CC414C /* Opposable.swift in Sources */,
+				5C1459BC2169206B00E0E289 /* Arc.swift in Sources */,
 				BA74CEDD1EF18C8700CC414C /* CGRectEdge.swift in Sources */,
 				BA74CEF91EF18C8700CC414C /* Square.swift in Sources */,
 				BA74CF091EF18C8700CC414C /* Side.swift in Sources */,
