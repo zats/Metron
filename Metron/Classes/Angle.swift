@@ -155,7 +155,16 @@ public func atan2(_ lhs: CGFloat, _ rhs: CGFloat) -> Angle {
 // MARK: Points
 
 public extension CGPoint {
-    
+  /// Convenience initializer for a point from polar coordinates
+  public init(angle: Angle, distance: CGFloat, from point: CGPoint = .zero) {
+    self.init(angle: angle.radians, distance: distance, from: point)
+  }
+
+  public init(angle: CGFloat, distance: CGFloat, from point: CGPoint = .zero) {
+    self.init(x: distance * cos(angle) + point.x,
+              y: distance * sin(angle) + point.y)
+  }
+
     /// - returns: The `Angle` between horizontal line through `self`,
     /// and line from `self` to `reference.
     public func polarAngle(reference: CGPoint) -> Angle {
