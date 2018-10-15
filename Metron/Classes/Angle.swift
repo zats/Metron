@@ -175,8 +175,8 @@ public extension CGPoint {
     /// and `self` to `next`, i.e. the angle at vertex `self`
     /// of triangle (`previous`,`self`,`next`).
     public func angle(previous: CGPoint, next: CGPoint) -> Angle {
-        let v1 = previous - self
-        let v2 = next - self
+        let v1: CGVector = previous - self
+        let v2: CGVector = next - self
         return atan2(v1.dy,v1.dx) - atan2(v2.dy,v2.dx)
     }
 }

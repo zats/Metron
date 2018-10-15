@@ -15,8 +15,8 @@ public extension CGVector {
     }
     
     public init(angle: Angle, magnitude: CGFloat) {
-        dx = magnitude * cos(angle)
-        dy = magnitude * sin(angle)
+      self.init(dx: magnitude * cos(angle),
+                dy: magnitude * sin(angle))
     }
     
     public var inversed: CGVector {

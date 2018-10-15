@@ -1,6 +1,10 @@
 import CoreGraphics
 
 public extension CGPoint {
+
+    public func translated(by dx: CGFloat, _ dy: CGFloat) -> CGPoint {
+        return CGPoint(x: x + dx, y: y + dy)
+    }
     
     /// - returns: A `CGVector` with dx: x and dy: y.
     public var vector: CGVector {
@@ -42,12 +46,26 @@ public extension CGPoint {
     public func isAt(line: Line) -> Bool {
         return line.contains(self)
     }
+
+  /// Interpolates between `self` and `other` points by value `t`
+  public func interpolated(to other: CGPoint, t: CGFloat) -> CGPoint {
+    return self + CGPoint(x: (other.x - self.x) * t,
+                          y: (other.y - self.y) * t)
+  }
 }
 
 // MARK: Arithmetic
 
+public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+  return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+}
+
 public func +(lhs: CGPoint, rhs: CGPoint) -> CGVector {
     return CGVector(dx: lhs.x + rhs.x, dy: lhs.y + rhs.y)
+}
+
+public func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+  return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
 }
 
 public func -(lhs: CGPoint, rhs: CGPoint) -> CGVector {
@@ -56,7 +74,12 @@ public func -(lhs: CGPoint, rhs: CGPoint) -> CGVector {
 
 
 public func +(lhs: CGPoint, rhs: CGVector) -> CGPoint {
-    return CGPoint(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
+  return CGPoint(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
+}
+
+public func +=(lhs: inout CGPoint, rhs: CGVector) {
+  lhs.x += rhs.dx
+  lhs.y += rhs.dy
 }
 
 public func -(lhs: CGPoint, rhs: CGVector) -> CGPoint {

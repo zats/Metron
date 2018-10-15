@@ -10,8 +10,8 @@ public extension CGRect {
     
     public init(center: CGPoint, size: CGSize) {
         let halfSize = size * 0.5
-        self.origin = CGPoint(x: center.x - halfSize.width, y: center.y - halfSize.height)
-        self.size = size
+        self.init(origin: CGPoint(x: center.x - halfSize.width, y: center.y - halfSize.height),
+                  size: size)
     }
     
     public init(origin: CGPoint, edges: CGFloat) {
@@ -76,6 +76,10 @@ public extension CGRect {
     public func scaled(by scale: CGFloat) -> CGRect {
         return CGRect(center: center, size: size * scale)
     }
+
+    public func translated(by dx: CGFloat, _ dy: CGFloat) -> CGRect {
+      return CGRect(origin: origin.translated(by: dx, dy), size: size)
+    }
     
     /// - returns: A `CGRect` with size scaled to the provided scale factor,
     /// preserving the specified corner.
@@ -92,7 +96,7 @@ public extension CGRect {
 
 
 extension CGRect : Drawable {
-    public var path: CGPath? {
+    public var path: CGPath {
         return CGPath(rect: self, transform: nil)
     }
 }
