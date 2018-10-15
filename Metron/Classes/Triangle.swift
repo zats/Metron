@@ -55,6 +55,20 @@ public struct Triangle {
     }
 }
 
+public extension Triangle {
+  static func equilateral(center: CGPoint, distance: CGFloat, direction: Angle) -> Triangle {
+    let a = CGPoint(angle: Angle(direction.radians + .pi / 2),
+                    distance: distance,
+                    from: center)
+    let b = CGPoint(angle: Angle(direction.radians - .pi * 3 / 2 + .pi / 2),
+                    distance: distance,
+                    from: center)
+    let c = CGPoint(angle: Angle(direction.radians - .pi * 6 / 2 + .pi / 2),
+                    distance: distance,
+                    from: center)
+    return Triangle(a: a, b: b, c: c)
+  }
+}
 
 public extension Triangle {
     
