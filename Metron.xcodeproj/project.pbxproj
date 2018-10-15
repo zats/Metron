@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C1459BC2169206B00E0E289 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1459BB2169206B00E0E289 /* Arc.swift */; };
+		5CDB51E4216AE83800A16CBA /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB51E3216AE83800A16CBA /* Rectangle.swift */; };
 		BA74CEA51EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
 		BA74CEA61EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
 		BA74CEA71EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
@@ -116,6 +117,7 @@
 		52D6D9F01BEFFFBE002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1459BB2169206B00E0E289 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		5CDB51E3216AE83800A16CBA /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Metron.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Metron.plist; sourceTree = "<group>"; };
 		BA74CE881EF18C8700CC414C /* CornerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerType.swift; sourceTree = "<group>"; };
 		BA74CE891EF18C8700CC414C /* Drawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
@@ -235,13 +237,14 @@
 				BA74CE911EF18C8700CC414C /* Angle.swift */,
 				BA74CE921EF18C8700CC414C /* Circle.swift */,
 				BA74CE931EF18C8700CC414C /* Corner.swift */,
-				BA74CE941EF18C8700CC414C /* Extensions */,
 				BA74CE9B1EF18C8700CC414C /* General.swift */,
 				BA74CE9C1EF18C8700CC414C /* Line.swift */,
 				BA74CE9D1EF18C8700CC414C /* LineSegment.swift */,
 				BA74CE9E1EF18C8700CC414C /* Polygon.swift */,
+				5CDB51E3216AE83800A16CBA /* Rectangle.swift */,
 				BA74CE9F1EF18C8700CC414C /* Square.swift */,
 				BA74CEA01EF18C8700CC414C /* Triangle.swift */,
+				BA74CE941EF18C8700CC414C /* Extensions */,
 				BA74CEA11EF18C8700CC414C /* Visual */,
 			);
 			name = Classes;
@@ -472,6 +475,7 @@
 				BA74CF051EF18C8700CC414C /* CornerPosition.swift in Sources */,
 				BA74CEAD1EF18C8700CC414C /* EdgeType.swift in Sources */,
 				BA74CEA91EF18C8700CC414C /* Drawable.swift in Sources */,
+				5CDB51E4216AE83800A16CBA /* Rectangle.swift in Sources */,
 				BA74CEB11EF18C8700CC414C /* Opposable.swift in Sources */,
 				5C1459BC2169206B00E0E289 /* Arc.swift in Sources */,
 				BA74CEDD1EF18C8700CC414C /* CGRectEdge.swift in Sources */,
