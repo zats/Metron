@@ -5,5 +5,5 @@ import CoreGraphics
  *  that can then be drawn.
  */
 public protocol Drawable {
-    var path: CGPath? { get }
+    var path: CGPath { get }
 }

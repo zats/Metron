@@ -113,7 +113,7 @@ public extension Polygon {
 
 extension Polygon : Drawable {
     
-    public var path: CGPath? {
+    public var path: CGPath {
         var pointsIterator = points.makeIterator()
         if let first = pointsIterator.next() {
             let path = CGMutablePath()
@@ -122,9 +122,9 @@ extension Polygon : Drawable {
                 path.addLine(to: next)
             }
             path.closeSubpath()
-            return path.copy()
+            return path
         }
-        return nil
+        return CGMutablePath()
     }
 }
 

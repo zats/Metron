@@ -27,7 +27,7 @@ public struct Arc {
 // MARK: Drawable
 
 extension Arc : Drawable {
-  public var path: CGPath? {
+  public var path: CGPath {
     let path = CGMutablePath()
     path.addArc(center: center, radius: radius, startAngle: angle1.radians, endAngle: angle2.radians, clockwise: false)
     return path

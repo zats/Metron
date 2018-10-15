@@ -30,7 +30,7 @@ public extension Square {
 
 
 extension Square : Drawable {
-    public var path: CGPath? {
+    public var path: CGPath {
         return rect.path
     }
 }

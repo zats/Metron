@@ -86,7 +86,7 @@ public extension Circle {
 // MARK: Drawable
 
 extension Circle : Drawable {
-    public var path: CGPath? {
+    public var path: CGPath {
         return CGPath(ellipseIn: boundingRect, transform: nil)
     }
 }
