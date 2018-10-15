@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0ECC6F2174CC1F00C87DCF /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ECC6E2174CC1F00C87DCF /* Transformable.swift */; };
 		5C1459BC2169206B00E0E289 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1459BB2169206B00E0E289 /* Arc.swift */; };
 		5CDB51E4216AE83800A16CBA /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB51E3216AE83800A16CBA /* Rectangle.swift */; };
 		BA74CEA51EF18C8700CC414C /* CornerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CE881EF18C8700CC414C /* CornerType.swift */; };
@@ -116,6 +117,7 @@
 		52D6D9E21BEFFF6E002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C0ECC6E2174CC1F00C87DCF /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
 		5C1459BB2169206B00E0E289 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		5CDB51E3216AE83800A16CBA /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Metron.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Metron.plist; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				BA74CE8C1EF18C8700CC414C /* PolygonType.swift */,
 				BA74CE8D1EF18C8700CC414C /* Rotatable.swift */,
 				BA74CE8E1EF18C8700CC414C /* Shape.swift */,
+				5C0ECC6E2174CC1F00C87DCF /* Transformable.swift */,
 			);
 			name = Protocols;
 			path = Metron/Protocols;
@@ -482,6 +485,7 @@
 				BA74CEF91EF18C8700CC414C /* Square.swift in Sources */,
 				BA74CF091EF18C8700CC414C /* Side.swift in Sources */,
 				BA74CECD1EF18C8700CC414C /* Corner.swift in Sources */,
+				5C0ECC6F2174CC1F00C87DCF /* Transformable.swift in Sources */,
 				BA74CEB91EF18C8700CC414C /* Rotatable.swift in Sources */,
 				BA74CEC51EF18C8700CC414C /* Angle.swift in Sources */,
 				BA74CEC91EF18C8700CC414C /* Circle.swift in Sources */,

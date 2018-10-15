@@ -1,9 +1,5 @@
 import CoreGraphics
 
-public protocol Transformable {
-    func applying(_ t: CGAffineTransform) -> Self
-}
-
 //  Native conformance
 extension CGPoint : Transformable {}
 extension CGSize : Transformable {}
