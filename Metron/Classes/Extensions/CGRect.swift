@@ -92,6 +92,10 @@ public extension CGRect {
         let corners = edge.corners
         return LineSegment(a: corner(corners.0), b: corner(corners.1))
     }
+
+  public var bounds: CGRect {
+    return CGRect(origin: .zero, size: self.size)
+  }
 }
 
 
@@ -114,7 +118,7 @@ extension CGRect : Shape {
         return (2.0 * width) + (2.0 * height)
     }
     
-    public var boundingRect: CGRect { return self }
+    public var frame: CGRect { return self }
 }
 
 extension CGRect : PolygonType {

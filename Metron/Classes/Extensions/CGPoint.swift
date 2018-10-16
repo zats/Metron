@@ -49,13 +49,18 @@ public extension CGPoint {
 
   /// Interpolates between `self` and `other` points by value `t`
   public func interpolated(to other: CGPoint, t: CGFloat) -> CGPoint {
-    return self + CGPoint(x: (other.x - self.x) * t,
-                          y: (other.y - self.y) * t)
+    return self + (other - self) * t
+  }
+
+  public func interpolated(to other: CGPoint, by distance: CGFloat) -> CGPoint {
+    return self.interpolated(to: other, t: distance / self.distance(to: other))
   }
 }
 
 // MARK: Arithmetic
-
+prefix public func -(lhs: CGPoint) -> CGPoint {
+  return CGPoint(x: -lhs.x, y: -lhs.y)
+}
 public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
   return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }

@@ -62,7 +62,7 @@ extension Square : Shape {
     public var width: CGFloat { return edges }
     public var height: CGFloat { return edges }
     
-    public var boundingRect: CGRect { return rect }
+    public var frame: CGRect { return rect }
     
     public func contains(_ point: CGPoint) -> Bool {
         return rect.contains(point)

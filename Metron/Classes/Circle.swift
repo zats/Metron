@@ -11,7 +11,9 @@ public struct Circle {
     /// The radius of the circle, i.e. the distance
     /// from the center to the edge of the circle.
     public var radius: CGFloat
-    
+
+    public var transform: CGAffineTransform = .identity
+
     public init(center: CGPoint, radius: CGFloat) {
         self.center = center
         self.radius = radius
@@ -19,7 +21,7 @@ public struct Circle {
 }
 
 public extension Circle {
-    
+
     /// Initializes a `Circle` with radius equal to
     /// half of the provided diameter.
     public init(center: CGPoint, diameter: CGFloat) {
@@ -87,8 +89,12 @@ public extension Circle {
 
 extension Circle : Drawable {
     public var path: CGPath {
-        return CGPath(ellipseIn: boundingRect, transform: nil)
+      var transform = self.transform
+      return CGPath(ellipseIn: frame, transform: &transform)
     }
+}
+
+extension Circle: MutableTransformable {
 }
 
 // MARK: Shape
@@ -117,7 +123,7 @@ extension Circle : Shape {
     public var height: CGFloat { return diameter }
     
     /// The smallest rect in which the circle can be fitted.
-    public var boundingRect: CGRect {
+    public var frame: CGRect {
         return CGRect(center: center, edges: diameter)
     }
     

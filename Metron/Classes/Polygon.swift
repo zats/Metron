@@ -131,7 +131,7 @@ extension Polygon : Drawable {
 extension Polygon : Shape {
     
     public var center: CGPoint {
-        return boundingRect.center
+        return frame.center
     }
     
     public var perimeter: CGFloat {
@@ -190,12 +190,12 @@ extension Polygon : Shape {
     public var width: CGFloat { return maxX - minX }
     public var height: CGFloat { return maxY - minY }
     
-    public var boundingRect: CGRect {
+    public var frame: CGRect {
         return CGRect(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
     }
     
     public func contains(_ point: CGPoint) -> Bool {
-        guard boundingRect.contains(point) else { return false }
+        guard frame.contains(point) else { return false }
         //  Raycasting
         let lineThroughPoint = Line(angle: Angle(0.0), through: point)
         let intersectionsBefore = lineSegments.flatMap { $0.intersection(with: lineThroughPoint) }.filter { $0.x < point.x }

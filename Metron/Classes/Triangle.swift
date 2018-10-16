@@ -43,8 +43,10 @@ public extension Triplet where T: Summable {
  *  It is defined by its three vertices, the points where the sides
  *  meet.
  */
-public struct Triangle {
+public struct Triangle: MutableTransformable {
     public var vertices: Triplet<Vertex>
+
+    public var transform: CGAffineTransform = .identity
     
     public init(_ verticesTriplet: Triplet<Vertex>) {
         self.vertices = verticesTriplet
@@ -56,15 +58,25 @@ public struct Triangle {
 }
 
 public extension Triangle {
-  static func equilateral(center: CGPoint, distance: CGFloat, direction: Angle) -> Triangle {
-    let a = CGPoint(angle: Angle(direction.radians + .pi / 2),
-                    distance: distance,
+  static func equilateral(foundation: CGPoint, height: CGFloat, direction angle: Angle = .zero) -> Triangle {
+    let a: CGPoint = foundation + CGPoint(angle: angle, distance: height)
+    let halfbase = height / tan(.pi/3)
+    let b: CGPoint = foundation + CGPoint(angle: angle + Angle(.pi/2),
+                                          distance: halfbase)
+    let c: CGPoint = foundation + CGPoint(angle: angle - Angle(.pi/2),
+                                          distance: halfbase)
+    return Triangle(a: a, b: b, c: c)
+  }
+
+  static func equilateral(center: CGPoint, radius: CGFloat, direction angle: Angle = .zero) -> Triangle {
+    let a = CGPoint(angle: Angle(angle.radians),
+                    distance: radius,
                     from: center)
-    let b = CGPoint(angle: Angle(direction.radians - .pi * 3 / 2 + .pi / 2),
-                    distance: distance,
+    let b = CGPoint(angle: Angle(angle.radians + .pi * 2 / 3),
+                    distance: radius,
                     from: center)
-    let c = CGPoint(angle: Angle(direction.radians - .pi * 6 / 2 + .pi / 2),
-                    distance: distance,
+    let c = CGPoint(angle: Angle(angle.radians + .pi * 4 / 3),
+                    distance: radius,
                     from: center)
     return Triangle(a: a, b: b, c: c)
   }
@@ -302,7 +314,7 @@ extension Triangle : Drawable {
         path.addLine(to: vertices.b)
         path.addLine(to: vertices.c)
         path.closeSubpath()
-        return path
+        return path.transforming(using: self.transform)
     }
 }
 
@@ -358,7 +370,7 @@ extension Triangle : Shape {
     public var width: CGFloat { return maxX - minX }
     public var height: CGFloat { return maxY - minY }
     
-    public var boundingRect: CGRect {
+    public var frame: CGRect {
         return CGRect(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
     }
     
@@ -380,7 +392,7 @@ extension Triangle : Shape {
 
 extension Triangle : CustomDebugStringConvertible {
     public var debugDescription: String {
-        return "Triangle {a: \(vertexA), b: \(vertexB), c: \(vertexC)}"
+      return "Triangle {a: \(vertexA), b: \(vertexB), c: \(vertexC)}\( transform.isIdentity ? "" : " transform: \(transform)" )"
     }
 }
 

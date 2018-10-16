@@ -25,8 +25,16 @@ public protocol Shape {
     var height: CGFloat { get }
     
     /// The smallest rect in which the shape can be fitted.
-    var boundingRect: CGRect { get }
+    var frame: CGRect { get }
+
+    var bounds: CGRect { get }
     
     /// True if the provided point is inside this shape.
     func contains(_ point: CGPoint) -> Bool
+}
+
+public extension Shape {
+  public var bounds: CGRect {
+    return frame.bounds
+  }
 }

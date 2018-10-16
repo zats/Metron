@@ -3,9 +3,10 @@ import CoreGraphics
 /**
  *  A `Rectangle` is a rectangle with edges of equal length.
  */
-public struct Rectangle {
+public struct Rectangle: MutableTransformable {
   public var origin: CGPoint
   public var size: CGSize
+  public var transform: CGAffineTransform = .identity
 
   public init(origin: CGPoint, size: CGSize) {
     self.origin = origin
@@ -29,7 +30,9 @@ public extension Rectangle {
 
 extension Rectangle : Drawable {
   public var path: CGPath {
-    return rect.path
+    let path = CGMutablePath()
+    path.addPath(rect.path)
+    return path.transforming(using: self.transform)
   }
 }
 
@@ -60,7 +63,7 @@ extension Rectangle : Shape {
   public var width: CGFloat { return size.width }
   public var height: CGFloat { return size.height }
 
-  public var boundingRect: CGRect { return rect }
+  public var frame: CGRect { return rect }
 
   public func contains(_ point: CGPoint) -> Bool {
     return rect.contains(point)

@@ -6,6 +6,8 @@ import CoreGraphics
 public struct LineSegment {
     public var a: CGPoint
     public var b: CGPoint
+
+    public var transform: CGAffineTransform = .identity
     
     public init(a: CGPoint, b: CGPoint) {
         self.a = a
@@ -19,6 +21,11 @@ public extension LineSegment {
         self.a = origin
         self.b = origin + vector
     }
+
+  public init(length: CGFloat, angle: Angle, origin: CGPoint = .zero) {
+    self.init(origin: origin,
+              vector: CGPoint(angle: angle, distance: length).vector)
+  }
     
     /// - returns: A `Line` that runs through this line segment's points.
     public var line: Line {
@@ -95,15 +102,13 @@ public extension LineSegment {
     /// - returns: A new `LineSegment` that is rotated by the provided angle,
     /// around point A.
     public func rotatedAroundA(_ angle: Angle) -> LineSegment {
-        let t = CGAffineTransform(rotationAngle: angle)
-        return self.applying(t, anchorPoint: a)
+        return self.applying(CGAffineTransform(angle: angle, around: a))
     }
     
     /// - returns: A new `LineSegment` that is rotated by the provided angle,
     /// around point B.
     public func rotatedAroundB(_ angle: Angle) -> LineSegment {
-        let t = CGAffineTransform(rotationAngle: angle)
-        return self.applying(t, anchorPoint: b)
+        return self.applying(CGAffineTransform(angle: angle, around: b))
     }
 }
 
@@ -118,7 +123,7 @@ extension LineSegment : Drawable {
         let path = CGMutablePath()
         path.move(to: self.a)
         path.addLine(to: self.b)
-        return path
+        return path.transforming(using: self.transform)
     }
 }
 
