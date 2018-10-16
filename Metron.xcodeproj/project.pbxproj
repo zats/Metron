@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5C0ECC6F2174CC1F00C87DCF /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ECC6E2174CC1F00C87DCF /* Transformable.swift */; };
+		5C0ECC732174D3EB00C87DCF /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ECC722174D3EB00C87DCF /* CGPathExtensions.swift */; };
 		5C1459BC2169206B00E0E289 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1459BB2169206B00E0E289 /* Arc.swift */; };
 		5CAE3B532175580300EE1FFA /* CGPointRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE3B522175580300EE1FFA /* CGPointRandom.swift */; };
+		5CAE3B552175596A00EE1FFA /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE3B542175596A00EE1FFA /* Cross.swift */; };
 		5CAE3B5921756B8500EE1FFA /* UIColorRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE3B5821756B8500EE1FFA /* UIColorRandom.swift */; };
 		5CAE3B5C21756C2C00EE1FFA /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE3B5B21756C2C00EE1FFA /* Palette.swift */; };
 		5CAE3B5E21757F8100EE1FFA /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE3B5D21757F8100EE1FFA /* UIColorExtensions.swift */; };
@@ -122,8 +124,10 @@
 		52D6D9F01BEFFFBE002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* Metron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0ECC6E2174CC1F00C87DCF /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
+		5C0ECC722174D3EB00C87DCF /* CGPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPathExtensions.swift; sourceTree = "<group>"; };
 		5C1459BB2169206B00E0E289 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		5CAE3B522175580300EE1FFA /* CGPointRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointRandom.swift; sourceTree = "<group>"; };
+		5CAE3B542175596A00EE1FFA /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
 		5CAE3B5821756B8500EE1FFA /* UIColorRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorRandom.swift; sourceTree = "<group>"; };
 		5CAE3B5B21756C2C00EE1FFA /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		5CAE3B5D21757F8100EE1FFA /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				BA74CE911EF18C8700CC414C /* Angle.swift */,
 				BA74CE921EF18C8700CC414C /* Circle.swift */,
 				BA74CE931EF18C8700CC414C /* Corner.swift */,
+				5CAE3B542175596A00EE1FFA /* Cross.swift */,
 				BA74CE9B1EF18C8700CC414C /* General.swift */,
 				BA74CE9C1EF18C8700CC414C /* Line.swift */,
 				BA74CE9D1EF18C8700CC414C /* LineSegment.swift */,
@@ -291,6 +296,7 @@
 				BA74CE981EF18C8700CC414C /* CGRectEdge.swift */,
 				BA74CE991EF18C8700CC414C /* CGSize.swift */,
 				BA74CE9A1EF18C8700CC414C /* CGVector.swift */,
+				5C0ECC722174D3EB00C87DCF /* CGPathExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -516,7 +522,9 @@
 				5C0ECC6F2174CC1F00C87DCF /* Transformable.swift in Sources */,
 				BA74CEB91EF18C8700CC414C /* Rotatable.swift in Sources */,
 				BA74CEC51EF18C8700CC414C /* Angle.swift in Sources */,
+				5C0ECC732174D3EB00C87DCF /* CGPathExtensions.swift in Sources */,
 				BA74CEC91EF18C8700CC414C /* Circle.swift in Sources */,
+				5CAE3B552175596A00EE1FFA /* Cross.swift in Sources */,
 				5CAE3B5C21756C2C00EE1FFA /* Palette.swift in Sources */,
 				5CAE3B5921756B8500EE1FFA /* UIColorRandom.swift in Sources */,
 				BA74CED51EF18C8700CC414C /* CGPoint.swift in Sources */,

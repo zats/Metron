@@ -15,12 +15,16 @@ public struct Angle {
     
     /// The current unit in which the angle is expressed.
     public var unit: Unit
-    
+
     /// Initializes a new `Angle`. Unit is radians by default.
     public init(_ value: CGFloat, unit: Unit = .radians) {
         self.value = value
         self.unit = unit
     }
+}
+
+public extension Angle {
+  public static let zero = Angle(0)
 }
 
 public extension Angle {
